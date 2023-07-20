@@ -12,15 +12,15 @@ You need to complete the following steps before experimenting with this sample:
 Now you are ready to go:
 * Clone this repository to your computer
 * Open the project in Xcode.
-* Open an `Metaperson2.0/WebViewController.swift` scene.
-* Find a `mobileSource` string and provide `CLIENT_ID` and `CLIENT_SECRET`.
+* Open the `Metaperson2.0/WebViewController.swift` scene.
+* Find the `mobileSource` string and provide `CLIENT_ID` and `CLIENT_SECRET`.
 ![Provide Client Credentials](./Documentation/Images/provide_credentials_in_Xcode.jpg "Provide Client Credentials")
 * Build and run an iOS application `Metaperson2.0`.
 
 Inside the application:
 * Press the `Create avatar` button to show the [MetaPerson Creator](https://metaperson.avatarsdk.com/)
 * Create your personal avatar.
-* Once you finished an avatar's customization, press the `Export` button to create download link.
+* Once you finished an avatar's customization, press the `Export` button to create a download link.
 * Once the link is created you can download your avatar.  
 
 ## How It Works
