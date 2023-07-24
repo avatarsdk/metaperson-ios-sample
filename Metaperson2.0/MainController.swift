@@ -63,7 +63,6 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.avatarZipPath = "https://metaperson.avatarsdk.com/avatars/c05fe09e-4f2f-4183-9950-684716dc6182/avatar.zip"
         
         downloadButton.isHidden = true
         let fileManager = FileManager.default
@@ -87,7 +86,7 @@ class MainController: UIViewController {
     @IBAction func makePhotoButtonPressed(_ sender: Any) {
         observation?.invalidate()
         
-        let webViewController = createWebView(url: "https://metaperson.avatarsdk.com/iframe.html")
+        let webViewController = createWebView(url: "https://mobile.metaperson.avatarsdk.com")
         webViewController.loadViewIfNeeded()
         navigationController?.pushViewController(webViewController, animated: true)
         webViewController.reloadPage(clearHistory: true)

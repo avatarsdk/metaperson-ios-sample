@@ -53,17 +53,14 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
 fileprivate let mobileSource = """
   const CLIENT_ID = "";
   const CLIENT_SECRET = "";
-  const EDITOR_URL = "/generator";
 
   document.addEventListener('DOMContentLoaded', function onDocumentReady() {
       window.addEventListener("message", onWindowMessage);
-
       window.webkit.messageHandlers.iosListener.postMessage(event.data);
   });
 
   var iframe = document.querySelector('iframe')
   iframe.setAttribute("id", "editor_iframe");
-  iframe.setAttribute("src", EDITOR_URL);
   iframe.setAttribute("allow", "fullscreen");
 
   var avatarPreset = document.getElementById('avatar-preset')
