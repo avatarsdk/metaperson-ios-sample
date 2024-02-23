@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uO3-wf-ahg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uO3-wf-ahg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="1Oy-9U-7re">
-                                        <rect key="frame" x="40" y="123" width="313" height="241"/>
+                                        <rect key="frame" x="40" y="123" width="313" height="298"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcH-lA-SJZ">
                                                 <rect key="frame" x="110.66666666666666" y="0.0" width="92" height="30"/>
@@ -76,6 +77,17 @@
                                                     <constraint firstItem="OsY-fH-r8V" firstAttribute="centerX" secondItem="XGM-mU-8d3" secondAttribute="centerX" id="sAi-pT-Kax"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8Y-Hh-ctV" userLabel="Show avatar">
+                                                <rect key="frame" x="81.666666666666686" y="268" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="jGg-a4-xf2"/>
+                                                    <constraint firstAttribute="height" constant="30" id="wp5-mQ-ytV"/>
+                                                </constraints>
+                                                <state key="normal" title="Show avatar"/>
+                                                <connections>
+                                                    <action selector="showButtonPressed:" destination="4Td-3C-oau" eventType="touchUpInside" id="alQ-tV-Xlg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="XGM-mU-8d3" firstAttribute="leading" secondItem="1Oy-9U-7re" secondAttribute="leading" id="Sto-n6-A1i"/>
@@ -108,6 +120,7 @@
                         <outlet property="progressInfoView" destination="XGM-mU-8d3" id="qpr-hX-S5m"/>
                         <outlet property="progressLabel" destination="OsY-fH-r8V" id="lih-NJ-xMQ"/>
                         <outlet property="progressView" destination="H8r-2n-zmr" id="SFp-oR-x8L"/>
+                        <outlet property="showButton" destination="b8Y-Hh-ctV" id="JGF-X8-F4P"/>
                         <outlet property="urlLabel" destination="XFM-on-RVy" id="Tpk-oU-tTt"/>
                     </connections>
                 </viewController>
@@ -127,10 +140,10 @@
                                 <rect key="frame" x="186" y="416" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-0J-JoY">
-                                <rect key="frame" x="305" y="46" width="72" height="62"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-0J-JoY">
+                                <rect key="frame" x="321" y="46" width="56" height="46"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="closeButtonIcon"/>
+                                <buttonConfiguration key="configuration" style="plain" image="closeIcon"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1MP-Hw-9iz"/>
@@ -144,6 +157,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juk-n8-DqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871" y="-737"/>
+        </scene>
+        <!--Viewer Controller-->
+        <scene sceneID="ide-vB-Dxi">
+            <objects>
+                <viewController storyboardIdentifier="ViewerController" id="hWU-2j-jsX" customClass="ViewerController" customModule="Metaperson2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHQ-al-Mci">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-bF-v1b" customClass="SCNAvatarViewer" customModule="Metaperson2_0" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKV-nt-P4r">
+                                <rect key="frame" x="162" y="743" width="69" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Zoom"/>
+                                <connections>
+                                    <action selector="zoomButtonPressed:" destination="hWU-2j-jsX" eventType="touchUpInside" id="Cp5-Qs-EbW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQC-DD-DED">
+                                <rect key="frame" x="333" y="75" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Hqt-zb-VVX"/>
+                                    <constraint firstAttribute="height" constant="44" id="MV9-CD-Sec"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="closeIcon"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="hWU-2j-jsX" eventType="touchUpInside" id="6yT-dO-8Lz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="32V-mb-mEe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="32V-mb-mEe" firstAttribute="trailing" secondItem="SQC-DD-DED" secondAttribute="trailing" constant="16" id="1cE-Ua-cTC"/>
+                            <constraint firstItem="69Q-bF-v1b" firstAttribute="leading" secondItem="32V-mb-mEe" secondAttribute="leading" id="53q-gk-TbV"/>
+                            <constraint firstItem="SQC-DD-DED" firstAttribute="top" secondItem="32V-mb-mEe" secondAttribute="top" constant="16" id="Cjz-wz-Rfh"/>
+                            <constraint firstItem="sKV-nt-P4r" firstAttribute="centerX" secondItem="RHQ-al-Mci" secondAttribute="centerX" id="Kab-sF-Ddo"/>
+                            <constraint firstItem="32V-mb-mEe" firstAttribute="bottom" secondItem="sKV-nt-P4r" secondAttribute="bottom" constant="40" id="KzW-La-5f9"/>
+                            <constraint firstItem="32V-mb-mEe" firstAttribute="trailing" secondItem="69Q-bF-v1b" secondAttribute="trailing" id="SLr-oe-idd"/>
+                            <constraint firstAttribute="bottom" secondItem="69Q-bF-v1b" secondAttribute="bottom" id="cq0-te-M7t"/>
+                            <constraint firstItem="69Q-bF-v1b" firstAttribute="top" secondItem="RHQ-al-Mci" secondAttribute="top" id="jqf-4V-9B5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewer" destination="69Q-bF-v1b" id="wIG-e4-k1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSb-ad-vvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.5419847328244" y="-731.69014084507046"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8B1-IT-gXe">
@@ -163,7 +230,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="closeButtonIcon" width="48" height="48"/>
+        <image name="closeIcon" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

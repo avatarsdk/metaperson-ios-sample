@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11487E932A6E89C300E61367 /* ViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11487E922A6E89C300E61367 /* ViewerController.swift */; };
+		11487EE12A6E8CFD00E61367 /* SCNAvatarViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11487EDE2A6E8CFD00E61367 /* SCNAvatarViewer.swift */; };
+		11487EE22A6E8CFD00E61367 /* AvatarViewer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11487EE02A6E8CFD00E61367 /* AvatarViewer.mm */; };
+		11487EE72A6E8D3200E61367 /* SCNScene+GLTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 11487EE52A6E8D3200E61367 /* SCNScene+GLTF.m */; };
+		11487EF22A6E8DC700E61367 /* SceneKitAdditions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11487EF02A6E8DC700E61367 /* SceneKitAdditions.mm */; };
+		11487EFC2A6E8E1E00E61367 /* PlyReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11487EF62A6E8E1D00E61367 /* PlyReader.mm */; };
+		11487EFD2A6E8E1E00E61367 /* SCNMatrix4Additions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 11487EF72A6E8E1D00E61367 /* SCNMatrix4Additions.mm */; };
+		11487EFE2A6E8E1E00E61367 /* loadModel3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11487EFB2A6E8E1E00E61367 /* loadModel3D.cpp */; };
+		11487F002A6E8F5600E61367 /* AvatarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11487EFF2A6E8F5600E61367 /* AvatarNode.swift */; };
+		11487F052A6FDA5700E61367 /* OpenCV in Frameworks */ = {isa = PBXBuildFile; productRef = 11487F042A6FDA5700E61367 /* OpenCV */; };
+		11487F072A6FDAD000E61367 /* GLTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11487EED2A6E8D7B00E61367 /* GLTF.framework */; };
+		11487F082A6FDAD000E61367 /* GLTF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11487EED2A6E8D7B00E61367 /* GLTF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C212CB2A5DC4CE00C0208D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C212CA2A5DC4CE00C0208D /* AppDelegate.swift */; };
 		11C212D22A5DC4CE00C0208D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C212D02A5DC4CE00C0208D /* Main.storyboard */; };
 		11C212D42A5DC4CE00C0208D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C212D32A5DC4CE00C0208D /* Assets.xcassets */; };
@@ -17,7 +29,55 @@
 		11C212E62A5DC5EB00C0208D /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 11C212E52A5DC5EB00C0208D /* Zip */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		11487EEC2A6E8D7B00E61367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11487EE82A6E8D7A00E61367 /* GLTF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83D6FF481F48BB3A00F71E0C;
+			remoteInfo = GLTF;
+		};
+		11487EEE2A6E8D8800E61367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11487EE82A6E8D7A00E61367 /* GLTF.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83D6FF471F48BB3A00F71E0C;
+			remoteInfo = GLTF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11487F092A6FDAD000E61367 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				11487F082A6FDAD000E61367 /* GLTF.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		11487E922A6E89C300E61367 /* ViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerController.swift; sourceTree = "<group>"; };
+		11487EDD2A6E8CFD00E61367 /* Metaperson2.0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Metaperson2.0-Bridging-Header.h"; sourceTree = "<group>"; };
+		11487EDE2A6E8CFD00E61367 /* SCNAvatarViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNAvatarViewer.swift; sourceTree = "<group>"; };
+		11487EDF2A6E8CFD00E61367 /* AvatarViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarViewer.h; sourceTree = "<group>"; };
+		11487EE02A6E8CFD00E61367 /* AvatarViewer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AvatarViewer.mm; sourceTree = "<group>"; };
+		11487EE52A6E8D3200E61367 /* SCNScene+GLTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNScene+GLTF.m"; sourceTree = "<group>"; };
+		11487EE62A6E8D3200E61367 /* SCNScene+GLTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNScene+GLTF.h"; sourceTree = "<group>"; };
+		11487EE82A6E8D7A00E61367 /* GLTF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTF.xcodeproj; path = GLTF/GLTF.xcodeproj; sourceTree = SOURCE_ROOT; };
+		11487EF02A6E8DC700E61367 /* SceneKitAdditions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneKitAdditions.mm; sourceTree = "<group>"; };
+		11487EF12A6E8DC700E61367 /* SceneKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneKitAdditions.h; sourceTree = "<group>"; };
+		11487EF62A6E8E1D00E61367 /* PlyReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlyReader.mm; sourceTree = "<group>"; };
+		11487EF72A6E8E1D00E61367 /* SCNMatrix4Additions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SCNMatrix4Additions.mm; sourceTree = "<group>"; };
+		11487EF82A6E8E1D00E61367 /* PlyReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlyReader.h; sourceTree = "<group>"; };
+		11487EF92A6E8E1E00E61367 /* loadModel3D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = loadModel3D.hpp; sourceTree = "<group>"; };
+		11487EFA2A6E8E1E00E61367 /* SCNMatrix4Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNMatrix4Additions.h; sourceTree = "<group>"; };
+		11487EFB2A6E8E1E00E61367 /* loadModel3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loadModel3D.cpp; sourceTree = "<group>"; };
+		11487EFF2A6E8F5600E61367 /* AvatarNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarNode.swift; sourceTree = "<group>"; };
 		11C212C72A5DC4CE00C0208D /* Metaperson2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metaperson2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C212CA2A5DC4CE00C0208D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C212D12A5DC4CE00C0208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,17 +95,88 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C212E62A5DC5EB00C0208D /* Zip in Frameworks */,
+				11487F052A6FDA5700E61367 /* OpenCV in Frameworks */,
+				11487F072A6FDAD000E61367 /* GLTF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11487EDB2A6E8CDF00E61367 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				11487EFF2A6E8F5600E61367 /* AvatarNode.swift */,
+				11487EE32A6E8D0C00E61367 /* Sources */,
+				11487EDC2A6E8CEB00E61367 /* AvatarViewer */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		11487EDC2A6E8CEB00E61367 /* AvatarViewer */ = {
+			isa = PBXGroup;
+			children = (
+				11487EDF2A6E8CFD00E61367 /* AvatarViewer.h */,
+				11487EE02A6E8CFD00E61367 /* AvatarViewer.mm */,
+				11487EDE2A6E8CFD00E61367 /* SCNAvatarViewer.swift */,
+			);
+			path = AvatarViewer;
+			sourceTree = "<group>";
+		};
+		11487EE32A6E8D0C00E61367 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				11487EF52A6E8E1300E61367 /* PLYReader */,
+				11487EE42A6E8D2400E61367 /* GLTFReader */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		11487EE42A6E8D2400E61367 /* GLTFReader */ = {
+			isa = PBXGroup;
+			children = (
+				11487EE62A6E8D3200E61367 /* SCNScene+GLTF.h */,
+				11487EE52A6E8D3200E61367 /* SCNScene+GLTF.m */,
+			);
+			path = GLTFReader;
+			sourceTree = "<group>";
+		};
+		11487EE92A6E8D7A00E61367 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11487EED2A6E8D7B00E61367 /* GLTF.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11487EF52A6E8E1300E61367 /* PLYReader */ = {
+			isa = PBXGroup;
+			children = (
+				11487EF12A6E8DC700E61367 /* SceneKitAdditions.h */,
+				11487EF02A6E8DC700E61367 /* SceneKitAdditions.mm */,
+				11487EFB2A6E8E1E00E61367 /* loadModel3D.cpp */,
+				11487EF92A6E8E1E00E61367 /* loadModel3D.hpp */,
+				11487EF82A6E8E1D00E61367 /* PlyReader.h */,
+				11487EF62A6E8E1D00E61367 /* PlyReader.mm */,
+				11487EFA2A6E8E1E00E61367 /* SCNMatrix4Additions.h */,
+				11487EF72A6E8E1D00E61367 /* SCNMatrix4Additions.mm */,
+			);
+			path = PLYReader;
+			sourceTree = "<group>";
+		};
+		11487F062A6FDAD000E61367 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11C212BE2A5DC4CE00C0208D = {
 			isa = PBXGroup;
 			children = (
 				11C212C92A5DC4CE00C0208D /* Metaperson2.0 */,
 				11C212C82A5DC4CE00C0208D /* Products */,
+				11487F062A6FDAD000E61367 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,13 +191,17 @@
 		11C212C92A5DC4CE00C0208D /* Metaperson2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				11487EDB2A6E8CDF00E61367 /* Common */,
 				11C212CA2A5DC4CE00C0208D /* AppDelegate.swift */,
 				11C212DE2A5DC4F300C0208D /* Common.swift */,
 				11C212E12A5DC52600C0208D /* MainController.swift */,
 				11C212E02A5DC52600C0208D /* WebViewController.swift */,
+				11487E922A6E89C300E61367 /* ViewerController.swift */,
+				11487EDD2A6E8CFD00E61367 /* Metaperson2.0-Bridging-Header.h */,
 				11C212D02A5DC4CE00C0208D /* Main.storyboard */,
 				11C212D32A5DC4CE00C0208D /* Assets.xcassets */,
 				11C212D52A5DC4CE00C0208D /* LaunchScreen.storyboard */,
+				11487EE82A6E8D7A00E61367 /* GLTF.xcodeproj */,
 				11C212D82A5DC4CE00C0208D /* Info.plist */,
 			);
 			path = Metaperson2.0;
@@ -82,14 +217,17 @@
 				11C212C32A5DC4CE00C0208D /* Sources */,
 				11C212C42A5DC4CE00C0208D /* Frameworks */,
 				11C212C52A5DC4CE00C0208D /* Resources */,
+				11487F092A6FDAD000E61367 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				11487EEF2A6E8D8800E61367 /* PBXTargetDependency */,
 			);
 			name = Metaperson2.0;
 			packageProductDependencies = (
 				11C212E52A5DC5EB00C0208D /* Zip */,
+				11487F042A6FDA5700E61367 /* OpenCV */,
 			);
 			productName = Metaperson2.0;
 			productReference = 11C212C72A5DC4CE00C0208D /* Metaperson2.0.app */;
@@ -107,6 +245,7 @@
 				TargetAttributes = {
 					11C212C62A5DC4CE00C0208D = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -121,15 +260,32 @@
 			mainGroup = 11C212BE2A5DC4CE00C0208D;
 			packageReferences = (
 				11C212E42A5DC5EB00C0208D /* XCRemoteSwiftPackageReference "Zip" */,
+				11487F032A6FDA5700E61367 /* XCRemoteSwiftPackageReference "opencv-spm" */,
 			);
 			productRefGroup = 11C212C82A5DC4CE00C0208D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 11487EE92A6E8D7A00E61367 /* Products */;
+					ProjectRef = 11487EE82A6E8D7A00E61367 /* GLTF.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				11C212C62A5DC4CE00C0208D /* Metaperson2.0 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		11487EED2A6E8D7B00E61367 /* GLTF.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTF.framework;
+			remoteRef = 11487EEC2A6E8D7B00E61367 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		11C212C52A5DC4CE00C0208D /* Resources */ = {
@@ -149,14 +305,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11487F002A6E8F5600E61367 /* AvatarNode.swift in Sources */,
+				11487EE22A6E8CFD00E61367 /* AvatarViewer.mm in Sources */,
+				11487EE72A6E8D3200E61367 /* SCNScene+GLTF.m in Sources */,
+				11487EFC2A6E8E1E00E61367 /* PlyReader.mm in Sources */,
 				11C212DF2A5DC4F300C0208D /* Common.swift in Sources */,
+				11487E932A6E89C300E61367 /* ViewerController.swift in Sources */,
+				11487EE12A6E8CFD00E61367 /* SCNAvatarViewer.swift in Sources */,
+				11487EFD2A6E8E1E00E61367 /* SCNMatrix4Additions.mm in Sources */,
+				11487EFE2A6E8E1E00E61367 /* loadModel3D.cpp in Sources */,
 				11C212CB2A5DC4CE00C0208D /* AppDelegate.swift in Sources */,
 				11C212E22A5DC52600C0208D /* WebViewController.swift in Sources */,
 				11C212E32A5DC52600C0208D /* MainController.swift in Sources */,
+				11487EF22A6E8DC700E61367 /* SceneKitAdditions.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11487EEF2A6E8D8800E61367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GLTF;
+			targetProxy = 11487EEE2A6E8D8800E61367 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		11C212D02A5DC4CE00C0208D /* Main.storyboard */ = {
@@ -232,6 +405,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -285,6 +459,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -297,25 +472,37 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAS99248K7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Metaperson2.0",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Metaperson2.0/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Metaperson2.0/Unity/Libraries",
+					"$(PROJECT_DIR)/Metaperson2.0/Unity/ModelLoader/Libraries",
+				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itseez3d.metaperson2.Metaperson2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Metaperson2.0/Metaperson2.0-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,25 +513,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAS99248K7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Metaperson2.0",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Metaperson2.0/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Metaperson2.0/Unity/Libraries",
+					"$(PROJECT_DIR)/Metaperson2.0/Unity/ModelLoader/Libraries",
+				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itseez3d.metaperson2.Metaperson2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Metaperson2.0/Metaperson2.0-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,6 +572,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		11487F032A6FDA5700E61367 /* XCRemoteSwiftPackageReference "opencv-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeatse/opencv-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		11C212E42A5DC5EB00C0208D /* XCRemoteSwiftPackageReference "Zip" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/Zip.git";
@@ -385,6 +591,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		11487F042A6FDA5700E61367 /* OpenCV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11487F032A6FDA5700E61367 /* XCRemoteSwiftPackageReference "opencv-spm" */;
+			productName = OpenCV;
+		};
 		11C212E52A5DC5EB00C0208D /* Zip */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 11C212E42A5DC5EB00C0208D /* XCRemoteSwiftPackageReference "Zip" */;

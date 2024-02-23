@@ -5,7 +5,7 @@
  * UNLESS REQUIRED BY APPLICABLE LAW OR AGREED BY ITSEEZ3D, INC. IN WRITING, SOFTWARE DISTRIBUTED UNDER THE LICENSE IS DISTRIBUTED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR
  * CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED
  * See the License for the specific language governing permissions and limitations under the License.
- * Written by Itseez3D, Inc. <support@itseez3D.com>, May 2017
+ * Written by Itseez3D, Inc. <support@itseez3D.com>, July 2023
  */
 
 import Foundation
@@ -51,8 +51,8 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
 }
 
 fileprivate let mobileSource = """
-  const CLIENT_ID = "";
-  const CLIENT_SECRET = "";
+  const CLIENT_ID = "C8v8Rfy722rNULBrCplaHQrviysuUjWrkyHWr6v4";
+  const CLIENT_SECRET = "vErhSkjPkXeyAFnEJsw8DBadbKnP1N4f3bmAiAT7ZlsREFp3nmZpM6hWDK7UpcjtgBomWBnLFkvCOCLbtjGM2NPZIIe9Xvb6wFg4pQCFzjGebj8ttLaM21WEFEXCv987";
 
   document.addEventListener('DOMContentLoaded', function onDocumentReady() {
       window.addEventListener("message", onWindowMessage);

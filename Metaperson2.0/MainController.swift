@@ -5,7 +5,7 @@
  * UNLESS REQUIRED BY APPLICABLE LAW OR AGREED BY ITSEEZ3D, INC. IN WRITING, SOFTWARE DISTRIBUTED UNDER THE LICENSE IS DISTRIBUTED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR
  * CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED
  * See the License for the specific language governing permissions and limitations under the License.
- * Written by Itseez3D, Inc. <support@itseez3D.com>, May 2017
+ * Written by Itseez3D, Inc. <support@itseez3D.com>, July 2023
  */
 
 import Foundation
@@ -29,29 +29,35 @@ class MainController: UIViewController {
     @IBOutlet weak var progressInfoView: UIView!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var showButton: UIButton!
     
     var observation: NSKeyValueObservation?
     
     var state = DownloadingState.none {
         didSet {
+            showButton.isHidden = true
+            progressInfoView.isHidden = false
+            
             switch state {
             case .none:
                 progressInfoView.isHidden = true
             case .downloading(let progress):
-                progressInfoView.isHidden = false
                 progressView.isHidden = false
                 progressView.progress = progress
                 progressLabel.text = "Downloading"
             case .downloaded:
-                progressInfoView.isHidden = false
-                progressView.isHidden = true
+                progressView.progress = 1
                 progressLabel.text = "Downloaded"
+                showButton.isHidden = false
             case .failed:
-                progressInfoView.isHidden = false
-                progressView.isHidden = true
                 progressLabel.text = "Failed"
             }
         }
+    }
+    
+    let modelFolderURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("model")
+    var modelURL: URL {
+        return modelFolderURL.appendingPathComponent("model.glb")
     }
     
     @AppStorage("avatarZipURL") var avatarZipPath: String = "" {
@@ -65,11 +71,8 @@ class MainController: UIViewController {
         super.viewDidLoad()
         
         downloadButton.isHidden = true
-        let fileManager = FileManager.default
-        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let modelURL = documentsURL.appendingPathComponent("model")
-
-        state = fileManager.fileExists(atPath: modelURL.path) ? .downloaded : .none
+        
+        state = FileManager.default.fileExists(atPath: modelURL.path) ? .downloaded : .none
         updateUI()
     }
     
@@ -113,7 +116,12 @@ class MainController: UIViewController {
             }
         }
     }
-
+    
+    @IBAction func showButtonPressed(_ sender: Any) {
+        let viewerVC = ViewerController.instantiateFromStoryboard("Main")
+        viewerVC.avatarURL = modelURL
+        self.present(viewerVC, animated: true, completion: nil)
+    }
     
     func createWebView(url: String) -> WebViewController {
         let webViewController = WebViewController.instantiateFromStoryboard("Main")
