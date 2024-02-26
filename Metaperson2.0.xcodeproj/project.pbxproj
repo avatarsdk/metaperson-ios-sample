@@ -19,6 +19,7 @@
 		11487F052A6FDA5700E61367 /* OpenCV in Frameworks */ = {isa = PBXBuildFile; productRef = 11487F042A6FDA5700E61367 /* OpenCV */; };
 		11487F072A6FDAD000E61367 /* GLTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11487EED2A6E8D7B00E61367 /* GLTF.framework */; };
 		11487F082A6FDAD000E61367 /* GLTF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11487EED2A6E8D7B00E61367 /* GLTF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117FD6642B8D15C80019C4F6 /* AvatarSDKCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FD6632B8D15C80019C4F6 /* AvatarSDKCredentials.swift */; };
 		11C212CB2A5DC4CE00C0208D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C212CA2A5DC4CE00C0208D /* AppDelegate.swift */; };
 		11C212D22A5DC4CE00C0208D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C212D02A5DC4CE00C0208D /* Main.storyboard */; };
 		11C212D42A5DC4CE00C0208D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C212D32A5DC4CE00C0208D /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		11487EFA2A6E8E1E00E61367 /* SCNMatrix4Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNMatrix4Additions.h; sourceTree = "<group>"; };
 		11487EFB2A6E8E1E00E61367 /* loadModel3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loadModel3D.cpp; sourceTree = "<group>"; };
 		11487EFF2A6E8F5600E61367 /* AvatarNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarNode.swift; sourceTree = "<group>"; };
+		117FD6632B8D15C80019C4F6 /* AvatarSDKCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSDKCredentials.swift; sourceTree = "<group>"; };
 		11C212C72A5DC4CE00C0208D /* Metaperson2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metaperson2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C212CA2A5DC4CE00C0208D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C212D12A5DC4CE00C0208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				11C212E12A5DC52600C0208D /* MainController.swift */,
 				11C212E02A5DC52600C0208D /* WebViewController.swift */,
 				11487E922A6E89C300E61367 /* ViewerController.swift */,
+				117FD6632B8D15C80019C4F6 /* AvatarSDKCredentials.swift */,
 				11487EDD2A6E8CFD00E61367 /* Metaperson2.0-Bridging-Header.h */,
 				11C212D02A5DC4CE00C0208D /* Main.storyboard */,
 				11C212D32A5DC4CE00C0208D /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 				11C212CB2A5DC4CE00C0208D /* AppDelegate.swift in Sources */,
 				11C212E22A5DC52600C0208D /* WebViewController.swift in Sources */,
 				11C212E32A5DC52600C0208D /* MainController.swift in Sources */,
+				117FD6642B8D15C80019C4F6 /* AvatarSDKCredentials.swift in Sources */,
 				11487EF22A6E8DC700E61367 /* SceneKitAdditions.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

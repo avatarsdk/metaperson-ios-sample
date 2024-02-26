@@ -51,8 +51,8 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
 }
 
 fileprivate let mobileSource = """
-  const CLIENT_ID = "C8v8Rfy722rNULBrCplaHQrviysuUjWrkyHWr6v4";
-  const CLIENT_SECRET = "vErhSkjPkXeyAFnEJsw8DBadbKnP1N4f3bmAiAT7ZlsREFp3nmZpM6hWDK7UpcjtgBomWBnLFkvCOCLbtjGM2NPZIIe9Xvb6wFg4pQCFzjGebj8ttLaM21WEFEXCv987";
+  const CLIENT_ID = "\(AvatarSDKCredentials.clientID)";
+  const CLIENT_SECRET = "\(AvatarSDKCredentials.clientSecret)";
 
   document.addEventListener('DOMContentLoaded', function onDocumentReady() {
       window.addEventListener("message", onWindowMessage);

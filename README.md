@@ -5,15 +5,15 @@ This sample demonstrates how to embed the [MetaPerson Creator](https://metaperso
 You need to complete the following steps before experimenting with this sample:
 
 * Get an AvatarSDK developer account at https://accounts.avatarsdk.com/developer/signup/
-* Create an application with Client credentials Authorization Grant at https://accounts.avatarsdk.com/developer/
+* Enter any name in the "Application Name” and press the "Submit" button to get your credentials for using Avatar SDK. https://accounts.avatarsdk.com/developer/
 * Copy the `App Client ID` and `App Client Secret` from the Client Access application at https://accounts.avatarsdk.com/developer/
 ![App Client Credentials](./Documentation/Images/credentials.jpg "App Client Credentials")
 
 Now you are ready to go:
 * Clone this repository to your computer
-* Open the project in Xcode.
-* Open the `Metaperson2.0/WebViewController.swift` scene.
-* Find the `mobileSource` string and provide `CLIENT_ID` and `CLIENT_SECRET`.
+* Open the workspace in Xcode.
+* Open the `Metaperson2.0/AvatarSDKCredentials.swift` file.
+* Find the `AvatarSDKCredentials` class and provide `clientID` and `clientSecret`.
 ![Provide Client Credentials](./Documentation/Images/provide_credentials_in_Xcode.jpg "Provide Client Credentials")
 * Build and run an iOS application `Metaperson2.0`.
 
@@ -21,7 +21,8 @@ Inside the application:
 * Press the `Create avatar` button to show the [MetaPerson Creator](https://metaperson.avatarsdk.com/)
 * Create your personal avatar.
 * Once you finished an avatar's customization, press the `Export` button to create a download link.
-* Once the link is created you can download your avatar.  
+* Once the link is created you can download your avatar.
+* Press `Show avatar` to open our fully native 3D viewer based on the SceneKit framework.
 
 ## How It Works
 ### Importing Avatar From Web Page
@@ -30,19 +31,16 @@ You can use any other Web View component that best suits you.
 * Load the following page in a Web View: https://metaperson.avatarsdk.com/iframe.html
 * Before the page is loaded this JavaScript code should be executed. It subscribes to some events and posts messages with authentication and export parameters.
 ```js
-const CLIENT_ID = "";
-const CLIENT_SECRET = "";
-const EDITOR_URL = "/generator";
+const CLIENT_ID = "\(AvatarSDKCredentials.clientID)";
+const CLIENT_SECRET = "\(AvatarSDKCredentials.clientSecret)";
 
 document.addEventListener('DOMContentLoaded', function onDocumentReady() {
     window.addEventListener("message", onWindowMessage);
-    
     window.webkit.messageHandlers.iosListener.postMessage(event.data);
 });
 
 var iframe = document.querySelector('iframe')
 iframe.setAttribute("id", "editor_iframe");
-iframe.setAttribute("src", EDITOR_URL);
 iframe.setAttribute("allow", "fullscreen");
 
 var avatarPreset = document.getElementById('avatar-preset')
