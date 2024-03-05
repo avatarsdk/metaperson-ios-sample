@@ -9,15 +9,22 @@
  */
 
 import UIKit
+import Combine
 
 class ViewerController: UIViewController {
+    var subscriptions = Set<AnyCancellable>()
     @IBOutlet weak var viewer: SCNAvatarViewer!
 
     var avatarURL: URL?
     var avatarNode: AvatarNode?
+    @IBOutlet weak var zoomButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewer.$isZoomed.sink { isZoomed in
+            self.zoomButton.setTitle(isZoomed ? "Zoom out" : "Zoom in", for: .normal)
+        }.store(in: &subscriptions)
 
         self.showModel()
     }

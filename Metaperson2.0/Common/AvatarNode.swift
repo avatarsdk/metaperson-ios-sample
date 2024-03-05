@@ -31,10 +31,10 @@ class AvatarNode: SCNNode {
         if haircutNode.childNodes.count > 0 {
             let haircutNode2 = deepCopyNode(node: haircutNode.childNodes[0])
             haircutNode.addChildNode(haircutNode2)
+
+            haircutNode.childNodes[0].geometry?.firstMaterial?.writesToDepthBuffer = false
+            haircutNode.childNodes[0].geometry?.firstMaterial?.isDoubleSided = false
         }
-        
-        haircutNode.childNodes[0].geometry?.firstMaterial?.writesToDepthBuffer = false
-        haircutNode.childNodes[0].geometry?.firstMaterial?.isDoubleSided = false
         
         addChildNode(avatarNode)
     }

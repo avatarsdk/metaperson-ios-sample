@@ -10,6 +10,7 @@
 
 import SceneKit
 import CoreImage
+import Combine
 
 #if os(iOS)
 typealias SceneKitFloat = Float
@@ -23,7 +24,7 @@ class SCNAvatarViewer: AvatarViewer {
     private var directionalLight2Node: SCNNode = SCNNode()
 
     weak var avatarNode: AvatarNode?
-    var isZoomed = true
+    @Published var isZoomed = true
 
     var avatarTransform = SCNMatrix4Identity {
         didSet {
@@ -42,6 +43,7 @@ class SCNAvatarViewer: AvatarViewer {
         setupScene()
 
         sceneView.frame = frame
+        sceneView.scene?.lightingEnvironment.contents = UIImage(named: "lightingEnvironmentMap.jpg")?.cgImage
 
         self.addSubview(sceneView)
     }
@@ -71,9 +73,9 @@ class SCNAvatarViewer: AvatarViewer {
     
     func zoomModel() {
         if isZoomed {
-            cameraNode.position = SCNVector3(x: 0, y: 0.0, z: 2.2)
+            cameraNode.position = SCNVector3(x: 0, y: 0.25, z: 2.2)
         } else {
-            cameraNode.position = SCNVector3(x: 0, y: 0.8, z: 0.5)
+            cameraNode.position = SCNVector3(x: 0, y: 0.75, z: 0.7)
         }
         self.isZoomed.toggle()
     }

@@ -206,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="viewer" destination="69Q-bF-v1b" id="wIG-e4-k1R"/>
+                        <outlet property="zoomButton" destination="sKV-nt-P4r" id="iZ6-bI-Zgl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSb-ad-vvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
